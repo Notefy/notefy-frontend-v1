@@ -24,23 +24,9 @@ export const defaultTheme: Theme = {
     },
     icon: {
         color: "text-gray-500",
-        height: "24",
-        width: "24"
+        height: "h-10",
+        width: "w-10"
     }
 };
 
-export const theme2: Theme = {
-    primary: {
-        main: "",
-        text: ""
-    },
-    secondary: {
-        main: "",
-        text: "",
-    },
-    icon: {
-        color: "text-blue-500",
-        height: "24",
-        width: "24"
-    }
-};
+
