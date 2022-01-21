@@ -25,7 +25,7 @@ const FileTile: FC<FileTimeProps> = ({
             <div className="">
                 <div className="font-semibold">{title}</div>
                 {subtitle && (
-                    <div className="text-gray-400 font-light">
+                    <div className="font-light text-gray-400">
                         {concatinatedSubtitle}
                     </div>
                 )}

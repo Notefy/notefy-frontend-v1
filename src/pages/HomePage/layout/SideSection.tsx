@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 const SideSection: FC = () => {
     return (
-        <div className="flex flex-col grow bg-gray-700 h-full max-w-md py-4">
+        <div className="flex flex-col h-full max-w-md py-4 bg-gray-700 grow">
             <SearchBar />
             <FilesAndFolderList />
         </div>

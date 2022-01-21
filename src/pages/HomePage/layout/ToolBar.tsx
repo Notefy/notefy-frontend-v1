@@ -9,7 +9,7 @@ import { FC } from "react";
 
 const ToolBar: FC = () => {
     return (
-        <div className="flex items-center justify-end bg-gray-700 h-16 p-4">
+        <div className="flex items-center justify-end h-16 p-4 bg-gray-700">
             <ReadIcon />
             <SaveIcon />
             <DownloadIcon />
