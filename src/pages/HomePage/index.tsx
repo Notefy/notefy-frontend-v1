@@ -1,3 +1,4 @@
+// import { Modal } from "component";
 import { useState, FC } from "react";
 import MainSection from "./layout/MainSection";
 import SideSection from "./layout/SideSection";
@@ -15,6 +16,7 @@ const HomePage: FC = () => {
             <SideStrip toogleSideSection={toogleSideSection} />
             {isSideSectionOpen && <SideSection />}
             <MainSection />
+            {/* <Modal title="Modal"/> */}
         </div>
     );
 };

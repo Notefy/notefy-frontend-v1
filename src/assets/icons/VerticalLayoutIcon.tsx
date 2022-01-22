@@ -6,7 +6,7 @@ const VerticalLayoutIcon: FC<IconProps> = ({
     color,
     height,
     width,
-    className,
+    className: className,
 }) => {
     const theme = useContext<Theme>(ThemeContext);
     const heightClassName = height || theme?.icon?.height || " h-8 ";

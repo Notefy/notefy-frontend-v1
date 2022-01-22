@@ -16,7 +16,7 @@ const FileTile: FC<FileTimeProps> = ({
     isSelected,
     className,
 }) => {
-    const colorClassName = isSelected && "bg-gray-600";
+    const colorClassName = isSelected && "bg-gray-300";
     const outerDivClassName = `flex items-center ${className} ${colorClassName} h-16 p-4`;
     const concatinatedSubtitle = subtitle?.slice(0, 20) + " ...";
     return (
@@ -25,7 +25,7 @@ const FileTile: FC<FileTimeProps> = ({
             <div className="">
                 <div className="font-semibold">{title}</div>
                 {subtitle && (
-                    <div className="font-light text-gray-400">
+                    <div className="font-light text-gray-700">
                         {concatinatedSubtitle}
                     </div>
                 )}

@@ -1,6 +1,6 @@
 import { useContext, FC } from "react";
 import { ThemeContext } from "config/theme/ThemeContext";
-import { Theme } from "config/theme/theme";
+import { Theme } from "config/theme";
 
 interface IconButtonProps {
     icon: React.ReactNode;
@@ -19,7 +19,8 @@ const IconButton: FC<IconButtonProps> = ({
     className,
 }) => {
     const theme = useContext<Theme>(ThemeContext);
-    const iconButtonBGColor = backgroundColor || theme?.primary?.main;
+    const iconButtonBGColor = backgroundColor || "bg-inherit";
+
     const finalClassName = `${className} ${iconButtonBGColor}`;
     return (
         <button onClick={onClick} className={finalClassName}>

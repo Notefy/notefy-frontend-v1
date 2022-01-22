@@ -2,7 +2,7 @@ import { useContext, FC } from "react";
 import { Theme, ThemeContext } from "config/theme";
 import IconProps from "./icon.interface";
 
-const SettingsIcon: FC<IconProps> = ({ color, height, width, className }) => {
+const SettingsIcon: FC<IconProps> = ({ color, height, width, className: className }) => {
     const theme = useContext<Theme>(ThemeContext);
     const heightClassName = height || theme?.icon?.height || " h-8 ";
     const widthClassName = width || theme?.icon?.width || " w-8 ";

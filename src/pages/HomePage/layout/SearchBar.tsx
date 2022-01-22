@@ -20,12 +20,12 @@ const SearchBar: FC = () => {
 
     return (
         <div className="container flex flex-col items-center px-4">
-            <div className="relative w-full bg-gray-600 rounded-md">
+            <div className="relative w-full bg-gray-300 rounded-md">
                 <div className="container flex p-2 mx-auto">
                     <SearchIcon height="h-6" width="w-6" className="mx-2" />
                     <input
                         id="searchfield"
-                        className="w-full leading-normal transition bg-gray-600 appearance-none text-grey-800 focus:outline-none focus:border-transparent"
+                        className="w-full leading-normal transition appearance-none bg-inherit text-grey-800 focus:outline-none focus:border-transparent"
                         type="search"
                         placeholder="Search..."
                         value={searchText}

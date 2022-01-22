@@ -1,3 +1,4 @@
+import IconProps from "./icon.interface";
 import AddIcon from "./AddIcon";
 import CollapseIcon from "./CollapseIcon";
 import DownloadIcon from "./DownloadIcon";
@@ -14,6 +15,7 @@ import SettingsIcon from "./SettingsIcon";
 import UserIcon from "./UserIcon";
 import VerticalLayoutIcon from "./VerticalLayoutIcon";
 
+export type { IconProps };
 export {
     AddIcon,
     CollapseIcon,

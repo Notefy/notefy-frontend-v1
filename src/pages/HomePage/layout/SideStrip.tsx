@@ -1,14 +1,18 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { IconButton } from "component";
 import { AddIcon, MenuIcon, SettingsIcon, UserIcon } from "assets/icons";
+import { Theme, ThemeContext } from "config/theme";
 
 interface SideStripProps {
     toogleSideSection: () => void;
 }
 
 const SideStrip: FC<SideStripProps> = ({ toogleSideSection }) => {
+    const theme = useContext<Theme>(ThemeContext);
+    const finalClassName = `flex flex-col items-center justify-between flex-none h-full pt-4 pb-6 ${theme?.primary?.[500]} w-14 drop-shadow`;
+
     return (
-        <div className="flex flex-col items-center justify-between flex-none h-full pt-4 pb-6 bg-gray-800 w-14">
+        <div className={finalClassName}>
             <div className="flex flex-col justify-between">
                 <IconButton icon={<MenuIcon />} onClick={toogleSideSection} />
                 <IconButton

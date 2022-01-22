@@ -1,6 +1,6 @@
 import { useContext, FC } from "react";
 import { ThemeContext } from "config/theme/ThemeContext";
-import { Theme } from "config/theme/theme";
+import { Theme } from "config/theme/theme.interface";
 
 interface ButtonProps {
     icon?: React.ReactNode;
@@ -23,7 +23,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
     const theme = useContext<Theme>(ThemeContext);
     const buttonBGColor =
-        backgroundColor || theme?.primary?.main || " bg-gray-200 ";
+        backgroundColor || theme?.primary?.[500] || " bg-gray-200 ";
     const finalClassName = `${className} ${buttonBGColor}`;
     return (
         <button className={finalClassName} onClick={onClick}>
