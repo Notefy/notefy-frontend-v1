@@ -9,6 +9,7 @@ interface ButtonProps {
     backgroundColor?: string;
     hoverText?: string;
     hoverColor?: string;
+    textColor?: string;
     children?: React.ReactNode;
     direction?: string;
     className?: string;
@@ -17,14 +18,19 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = ({
     icon,
     text,
+    textColor,
     backgroundColor,
+    hoverColor,
     onClick,
     className,
 }) => {
     const theme = useContext<Theme>(ThemeContext);
     const buttonBGColor =
-        backgroundColor || theme?.primary?.[500] || " bg-gray-200 ";
-    const finalClassName = `${className} ${buttonBGColor}`;
+        backgroundColor || theme?.primary?.[600] || " bg-gray-200 ";
+    const buttonHoverColor =
+        hoverColor || "hover:" + theme?.primary?.[500] || " bg-gray-200 ";
+    const buttonTextColor = textColor || " text-gray-100 ";
+    const finalClassName = `mt-4 p-1 rounded-sm font-medium transition duration-300 ${buttonBGColor} ${buttonHoverColor} ${buttonTextColor} ${className}`;
     return (
         <button className={finalClassName} onClick={onClick}>
             {icon}

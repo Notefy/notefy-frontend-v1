@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { ThemeContextProvider } from "config/theme";
-import HomePage from "pages/HomePage";
-import AppStores from "config/store/AppStores";
+import AppStores from "config/store/AppStores"
+import AppRouter from "config/routes/Router";
 
 const App: FC = () => {
     return (
         <div className="">
             <AppStores>
                 <ThemeContextProvider>
-                    <HomePage />
+                    <AppRouter />
                 </ThemeContextProvider>
             </AppStores>
         </div>
